@@ -1,0 +1,292 @@
+
+
+.p {
+  font-size: large;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.herocontainer {
+  position: relative;
+  width: 100%;
+}
+
+.img2 {
+  width: 100%;
+  height: 550px;
+  display: block;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/*For hero text*/
+.txt {
+  position: absolute;
+  padding-top: 190px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: #5A8DA3;
+  font-size: 2.7rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .img2 {
+    max-height: 380px;
+  }
+
+  .txt {
+    font-size: 1.7rem;
+    padding-top: 100px;
+    width: 90%;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1.4fr 1.4fr 1.6fr;
+  grid-template-rows: 240px 320px;
+  gap: 12px;
+  padding: 40px 10px 10px;
+}
+
+/* the wrapper divs need overflow hidden so object-fit + border-radius works */
+.grid > div {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* placement goes on the div wrappers, NOT the img tags */
+.item1 { grid-column: 1; grid-row: 1; }
+.item2 { grid-column: 1; grid-row: 2; }
+.item3 { grid-column: 2 / span 2; grid-row: 1 / span 2; }
+.item4 { grid-column: 4; grid-row: 1; }
+
+.rightStack {
+  grid-column: 4;
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  height: 100%;
+  overflow: visible; /* override the .grid > div rule above */
+}
+
+.rightStack > div {
+  overflow: hidden;
+  border-radius: 12px;
+  min-height: 0;
+}
+
+.rightStack img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #e9e9d6;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 10px;
+}
+
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/*To hide the text and reveal it*/
+.info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  color: #e9e9d6;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0)
+  );
+
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.gallery:hover img {
+  transform: scale(1.05);
+}
+
+.gallery:hover .info {
+  transform: translateY(0);
+}
+
+.note {
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: #e9e9d6;
+}
+
+.note p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.button89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #5A8DA3;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button89:hover,
+.button89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+.h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #e9e9d6;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Location*/
+.collage {
+  align-items: center;
+  display: flex;
+  align-items: center; 
+  gap: 250px;
+  padding: 20px;
+}
+
+.img3 {
+  padding-left: 45px;
+}
+
+.txtcollage{
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  color: #E9E9D6;
+  text-align: right;
+  font-size: 1.7rem;
+}
+
+.locitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.icon {
+  opacity: 0.8;
+}
+
+.locsub {
+  margin-left: 26px;
+  color: #5A8DA3;
+  margin-bottom: 14px;
+}
+
+.locitem a {
+  margin-left: 90px;
+  color: #bfbbbf;
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+.locitem a:hover {
+  color: #d1d1d1;
+}
+
+.loctitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 550;
+  text-transform: lowercase;
+}
+
+.lochours {
+  line-height: 1.6;
+}

@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #86C4BC;
+  color: #fff;
+}
+
+.p {
+  font-size: large;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.h2 {
+  margin: 5px;
+}
+
+/*Navbar*/
+.navcontainer {
+  /*width: 90%;
+  margin: 25px auto;
+  background: white;
+  border-radius: 18px;
+  padding: 18px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);*/
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 18px;
+  padding: 18px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.09);
+  z-index: 1000;
+
+}
+
+.logo img {
+  height: 90px;
+  object-fit: contain;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin-top: 1px;
+}
+
+.link {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.active {
+  color: #5A8DA3;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navcontainer {
+    padding: 12px 16px;
+    top: 10px;
+    width: 95%;
+  }
+
+  .menu {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
+/*Hero*/
+.herocontainer {
+  position: relative;
+  width: 100%;
+}
+
+.img2 {
+  width: 100%;
+  height: 600px;
+  display: block;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.txt {
+  position: absolute;
+  padding-top: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  color: #E9E9D6;
+  font-size: 3rem;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .img2 {
+    max-height: 380px;
+  }
+
+  .txt {
+    font-size: 1.7rem;
+    padding-top: 100px;
+    width: 90%;
+  }
+}
+
+/*Collage*/
+.collage {
+  display: flex;
+  align-items: center; 
+  gap: 40px;
+
+}
+
+.img3 {
+  padding-left: 45px;
+  float:left;
+}
+
+.txtcollage{
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #E9E9D6;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .collage {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .img3 {
+    padding-left: 0;
+    float: none;
+    width: 100%;
+  }
+
+  .txtcollage {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
+.button89 {
+  --b: 3px;  
+  --s: .45em;
+  --color: #5A8DA3;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button89:hover,
+.button89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+.img4 {
+  width: 100%;
+  height: 500px; 
+  display: block;
+  filter: brightness(60%);
+}
+
+.txt2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #E9E9D6;
+  text-align: center;
+}
+
+.center{
+  text-align: center;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.carImg {
+  object-fit: cover;
+  border-radius: 50px;
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+}
+
+.carouselWrapper :global(.slick-dots li button:before) {
+  color: #5A8DA3;
+}
