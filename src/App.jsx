@@ -7,6 +7,7 @@ import Compare from './Pages/Compare';
 import Contact from './Pages/Contact';
 import Footer from './Pages/Footer';
 import Details from './Components/ProductPages/Details';
+import "./App.css"
     
 function App() {
         return(
